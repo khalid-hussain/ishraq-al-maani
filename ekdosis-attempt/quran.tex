@@ -1,0 +1,47 @@
+% !TeX TS-program = lualatex
+\documentclass{article}
+
+\usepackage{lipsum}
+
+\usepackage{ekdosis}
+
+\usepackage[english]{babel} % Arabic language/hyphenation
+\babelfont{rm}{alegreya}
+
+\babelprovide[onchar=fonts]{arabic}
+\babelfont[*arabic]{rm}{Scheherazade New}
+%\babelfont[*arabic]{rm}{Amiri Quran}
+%\babelfont[*arabic]{rm}[Scale=1.2]{Omar Naskh}
+
+\newcommand{\RL}[1]{\bgroup\textdir TRT#1\egroup}
+\newenvironment{Arabic}{\par\pardir TRT\textdir TRT}{\par}
+
+\SetLineation{lineation=none}
+
+\title{Surah Luqman \\[12pt] \Large \emph{Saheeh International translation}}
+\begin{document}
+	\maketitle
+	
+\begin{ekdosis}
+	
+	\footnotelayout{p}
+
+%\setcolumnwidth{3in/0.5in}
+
+\setcolumnwidth{\fill/0.3in}
+
+{\setlength{\parindent}{0pt}
+	\parskip=10pt
+\begin{alignment}[lcols=2]
+
+\input{luqman}
+
+
+\end{alignment}}
+
+\end{ekdosis}
+
+
+
+
+\end{document}
